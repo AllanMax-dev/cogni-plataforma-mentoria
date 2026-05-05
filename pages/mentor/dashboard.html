@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard do Mentor | cogni</title>
+  <link rel="stylesheet" href="../../styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <main class="page-container">
+    <div class="topbar">
+      <div></div>
+      <button id="logout-btn" class="btn-logout" type="button">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        Sair
+      </button>
+    </div>
+
+    <section class="dashboard-hero">
+      <div class="hero-content">
+        <div>
+          <div class="hero-badge">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            Área do Mentor
+          </div>
+
+          <h1 class="page-title">Olá, <span class="user-name"></span> 👋</h1>
+          <p class="page-subtitle">
+            Gerencie sua disponibilidade, acompanhe mentorias marcadas e visualize
+            sua agenda de forma rápida e organizada.
+          </p>
+        </div>
+
+        <div class="hero-mini-stats">
+          <div class="mini-stat">
+            <span>Status</span>
+            <strong>Online</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Perfil</span>
+            <strong>Mentor</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Agendados</span>
+            <strong>8</strong>
+          </div>
+          <div class="mini-stat">
+            <span>Horarios disponiveis</span>
+            <strong>5</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-card">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Painel de gestão</h2>
+          <p class="section-text">Acesse rapidamente os recursos principais do mentor.</p>
+        </div>
+      </div>
+
+      <div class="page-grid">
+        <a class="nav-card" href="perfil.html">
+          <div class="nav-card-top">
+            <div class="nav-icon">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <h3>Perfil do Mentor</h3>
+            <p>Consulte as informações públicas do seu perfil exibido na plataforma.</p>
+          </div>
+          <div class="nav-card-bottom">
+            Acessar <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <a class="nav-card" href="agenda-mentorias.html">
+          <div class="nav-card-top">
+            <div class="nav-icon">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <h3>Agenda de Mentorias</h3>
+            <p>Veja a agenda vinculada ao mentor e acompanhe os agendamentos.</p>
+          </div>
+          <div class="nav-card-bottom">
+            Acessar <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/auth.js"></script>
+  <script>
+    requireAuth();
+    requireRole("mentor");
+    renderUserName(".user-name");
+
+    const logoutBtn = document.getElementById("logout-btn");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", () => {
+        logoutMock();
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
