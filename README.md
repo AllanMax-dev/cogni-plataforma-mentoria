@@ -39,13 +39,13 @@ O projeto também possui uma área para mentores, onde é possível visualizar o
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/AllanMax-dev/cogni-plataforma-mentoria.git
 ````
 
 Acesse a pasta:
 
 ```bash
-cd seu-repositorio
+cd cogni-plataforma-mentoria
 ```
 
 Abra o arquivo `index.html` no navegador.
@@ -80,7 +80,8 @@ cogni/
 ├── assets/
 │   └── img/
 │       └── logo.png
-├── styles/
+|       └── logo_com_fundo.png
+├── styles/    
 │   └── style.css
 ├── scripts/
 │   ├── auth.js
